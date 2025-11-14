@@ -5,7 +5,7 @@ function Body() {
         <>
         <div className="grid-container">
             <div className="headshot">
-                <img src="/JulianaSantillan_PragueCzechia_ClockTower.jpg"></img>
+                <img src="./DSC00013-Edit (1).jpg"></img>
             </div>
             <div className = "content">
                 <h1>Juliana Santillan</h1>

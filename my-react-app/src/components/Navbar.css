@@ -3,8 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
-    color: #fff;
+    color: black;
     padding: 1rem;
     margin: 0;
     max-width: 100vw;
@@ -14,4 +13,32 @@
     display: flex;
     flex-direction: row;
     gap: 20px;
+}
+
+.navbar-left a{
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    color: var(--rebecca_purple);
+    font-size: 1.8rem;
+}
+
+.navbar-middle a{
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    color: black;
+}
+
+a{
+    all: unset;
+    text-decoration: none;
+}
+
+button{
+    all: unset;
+    text-decoration: none;
+    font-size: 1.8rem;
+    background-color: rebeccapurple;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
 }

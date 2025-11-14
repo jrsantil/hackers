@@ -9,7 +9,7 @@ function Navbar() {
         <>
         <nav className="navbar">
             <div className="navbar-left">
-                <a href="/">Juliana Santillan / Portfolio</a>
+                <a href="/">Juliana Santillan / <span style={{all: 'unset', fontWeight: '100'}}>Portfolio</span></a>
             </div>
             <div className="navbar-middle">
                 {url_links_middle.map((link, index) => (
