@@ -1,0 +1,7 @@
+.gitHubCards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
+    gap: 20px;
+    background-color: aqua;
+    justify-content: center;
+}

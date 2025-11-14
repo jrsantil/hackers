@@ -2,7 +2,7 @@ import Home from './pages/Home.jsx'
 import Gallery from './pages/Gallery.jsx'
 import Courses from './pages/Courses.jsx'
 import Projects from './pages/Projects.jsx'
-import Navbar from './Navbar.jsx'
+import Navbar from './components/Navbar.jsx'
 import { BrowserRouter as BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {

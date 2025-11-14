@@ -9,7 +9,7 @@ function Navbar() {
         <>
         <nav className="navbar">
             <div className="navbar-left">
-                <a href="/">Zohra Younus / Portfolio</a>
+                <a href="/">Juliana Santillan / Portfolio</a>
             </div>
             <div className="navbar-middle">
                 {url_links_middle.map((link, index) => (

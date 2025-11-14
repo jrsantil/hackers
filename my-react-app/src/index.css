@@ -1,6 +1,15 @@
+:root{
+    --rebecca_purple: #663399;
+    --ultra_db: #00008B;
+    --navy: #000080;
+}
+
+
 * {
   box-sizing: border-box;  
   margin: 0;
   padding: 0;
-  background-color: white;
+  background-color: navy;
+  color: white;
 }
+

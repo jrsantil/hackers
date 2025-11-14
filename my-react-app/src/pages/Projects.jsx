@@ -1,37 +1,47 @@
 import { useEffect, useState } from 'react'
 import GithubCard from '../components/GithubCard'
+import './Projects.css'
 
 function Projects() {
     const [reposArray, setReposArray] = useState([]);
     const [avatarURL, setAvatarURL] = useState();
-
-    // runs on initial page render
-    useEffect(() => {
-        fetch("https://api.github.com/users/AZYounus")
-            .then((res) => res.json()
-            ).then((result) => {
+    async function getUser() {
+        await fetch("https://api.github.com/users/jrsantil")
+            .then((res) => res.json())
+            .then((result) => {
                 console.log(result)
                 setAvatarURL(result.avatar_url)
             }, (error) => {
                 console.log(error)
             }
             )
-        fetch("https://api.github.com/users/AZYounus/repos")
-            .then((res) => res.json()
-            ).then((result) => {
+
+    }
+
+    async function getRepos() {
+        await fetch("https://api.github.com/users/jrsantil/repos")
+            .then((res) => res.json())
+            .then((result) => {
                 console.log(result)
-                result.map((elem) => {
-                    reposArray.push(elem)
-                })
-                console.log(reposArray)
+                setReposArray(result)
             }, (error) => {
                 console.log(error)
             }
             )
+    }
+    // runs on initial page render
+    useEffect(() => {
+        getUser()
+        getRepos()
     }, [])
     return (
         <>
-        <GithubCard image_url={avatarURL}/>
+        <div className='gitHubCards'>
+            {reposArray.map((repo, index) => (
+                <GithubCard image_url={avatarURL} key={index} repo_title={repo.name} repo_url={repo.html_url}/>
+            ))}
+
+        </div>
         </>
     )
 }
